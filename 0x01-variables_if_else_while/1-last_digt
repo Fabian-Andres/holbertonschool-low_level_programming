@@ -1,0 +1,24 @@
+nclude <stdio.h>
+  2 #include <stdlib.h>
+  3 #include <time.h>
+  4 /* more headers goes there */
+  5 
+  6 /* betty style doc for function main goes there */
+  7 int main(void)
+  8 {
+  9         int n, last;
+ 10 
+ 11         srand(time(0));
+ 12         n = rand() - RAND_MAX / 2;
+ 13         last = n % 10;
+ 14 
+ 15         if (last > 5)
+ 16         {
+ 17                 printf("Last digit of %i is %i and is greater than 5 \n", n, last);
+ 18         }
+ 19         else if (last < 6 && last != 0)
+ 20         {
+ 21                 printf("Last digit of %i is %i and is less than 6 and not 0 \n", n, last);
+ 22         }
+ 23         else {
+ 24                 printf("Last digit of %i is %i an        
