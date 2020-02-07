@@ -6,17 +6,20 @@
 */
 int main(void)
 {
-	int i;
+	int i, last;
 
 	for (i = 0; i <= 99; i++)
 	{
-		putchar((i / 10) + '0');
-		putchar((i % 10) + '0');
-
-		if (i < 99)
+		last = i % 10;
+		if (last != 0 && last != 1)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar((i / 10) + '0');
+			putchar((i % 10) + '0');
+			if(i < 99)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
