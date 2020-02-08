@@ -6,16 +6,17 @@
 */
 int main(void)
 {
-	int i, last;
+	int i, last, first;
 
 	for (i = 0; i <= 89; i++)
 	{
+		first = i / 10;
 		last = i % 10;
-		if (last != 0 && last != 1)
+		if (first < last)
 		{
 			putchar((i / 10) + '0');
 			putchar((i % 10) + '0');
-			if(i < 89)
+			if (i < 89)
 			{
 				putchar(',');
 				putchar(' ');
