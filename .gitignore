@@ -54,11 +54,11 @@ dkms.conf
 # Other things
 *~
 
+*#
+
 0x02-functions_nested_loops/main.c
 0x02-functions_nested_loops/main
 
 0x02-functions_nested_loops/_putchar.c
 0x02-functions_nested_loops/_putchar
 
-0x02-functions_nested_loops/holberton
-0x02-functions_nested_loops/holberton.h
