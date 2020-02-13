@@ -1,5 +1,4 @@
 #include <ctype.h>
-#include <stdio.h>
 #include "holberton.h"
 /**
  * _isdigit - check is uppercase.
