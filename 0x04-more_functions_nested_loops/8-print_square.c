@@ -9,11 +9,11 @@ void print_square(int size)
 {
 	int line, row;
 
-	for (line = 0; line < size; line++ )
+	for (line = 0; line < size; line++)
 	{
 		for (row = 0; row < size; row++)
 		{
-			_putchar('#');	
+			_putchar('#');
 		}
 
 		_putchar('\n');
