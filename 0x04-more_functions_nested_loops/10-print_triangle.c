@@ -5,8 +5,6 @@
  * @size: number
  * Return: Always 0 (Success)
  */
-
-
 void print_triangle(int size)
 {
 	int row, col;
@@ -17,7 +15,7 @@ void print_triangle(int size)
 		{
 			_putchar(' ');
 		}
-		for (col = ((size - row) + 1) ; col <= size; col++)
+		for (col = size - row + 1 ; col <= size; col++)
 		{
 			_putchar('#');
 		}
@@ -26,7 +24,7 @@ void print_triangle(int size)
 			_putchar('\n');
 		}
 	}
-	if (size <= 0)
+	if (size == 0)
 	{
 		_putchar('\n');
 	}
