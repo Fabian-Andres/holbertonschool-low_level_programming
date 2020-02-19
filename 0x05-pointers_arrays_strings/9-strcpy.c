@@ -13,8 +13,12 @@ char *_strcpy(char *dest, char *src)
 	int i, n;
 
 	for (n = 0; src[n] != '\0'; n++)
+	{
 		if (src[n] == '\0')
-			printf("\n");
+		{
+			putchar('\n');
+		}
+	}
 
 	for (i = 0; i < n && src[i] != '\0'; i++)
 		dest[i] = src[i];
@@ -22,6 +26,6 @@ char *_strcpy(char *dest, char *src)
 	for ( ; i < n; i++)
 		dest[i] = '\0';
 
-	return dest;
+	return (dest);
 
 }
