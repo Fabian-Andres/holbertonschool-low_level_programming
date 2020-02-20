@@ -1,9 +1,10 @@
 #include <stdio.h>
 /**
- * *_strcat - stcat function.
+ * *_strncat - *_strncat function.
  *
  * @dest: Value dest
  * @src: Value src
+ * @n: value n
  * Return: Always 0.
  */
 char *_strncat(char *dest, char *src, int n)
