@@ -1,25 +1,38 @@
 #include <stdio.h>
 /**
- * *string_toupper - Function.
+ * *cap_string - Function.
  *
  * @s: Value
  * Return: Always 0.
  */
 char *cap_string(char *s)
 {
-	int i, a;
+	int i;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (a = 'A'; a <= 'Z'; a++)
+		if (s[i] == '\t')
 		{
-			if ((s[i] - a) == 32)
-			{
-				if (s[i] >= ' ' && s[i] <= '/')
-					s[i] = a;
-				else
-					s[i] = s[i];
-			}
+			s[i] = ' ';
+		}
+		if ((s[i - 1] >= ' ' && s[i - 1] <= '/')
+		|| (s[i - 1] == '}') || (s[i - 1] == '{'))
+		{
+			if (s[i] >= 'a' && s[i] <= 'z')
+				s[i] = s[i] - 32;
+			else
+				s[i] = s[i];
+		}
+		if (s[i - 1] == '\n')
+		{
+			if (s[i] >= 'a' && s[i] <= 'z')
+				s[i] = s[i] - 32;
+			else
+				s[i] = s[i];
+		}
+		else
+		{
+			s[i] = s[i];
 		}
 	}
 	return (s);
