@@ -17,8 +17,6 @@ char *leet(char *s)
 		{
 			if (s[i] == abc[n] || s[i] == (abc[n] - 32))
 				s[i] = nums[n];
-			else
-				s[i] = s[i];
 		}
 	}
 	return (s);
