@@ -25,5 +25,6 @@ char *cap_string(char *s)
 				s[i] = s[i] - 32;
 		}
 	}
+	s[i++] = '\0';
 	return (s);
 }
