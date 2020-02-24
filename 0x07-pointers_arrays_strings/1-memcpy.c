@@ -1,8 +1,8 @@
 /**
- * *_memset - Function.
+ * *_memcpy - Function.
  *
- * @s: Value
- * @b: Value
+ * @dest: Value
+ * @src: Value
  * @n: Value
  * Return: Always 0.
  */
