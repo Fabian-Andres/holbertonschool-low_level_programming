@@ -10,6 +10,11 @@ char *_strstr(char *haystack, char *needle)
 {
 	int i, y; /** Counters */
 
+	if (haystack[0] == '\0')
+	{
+		return (&haystack[0]);
+	}
+
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
 		if (haystack[i] == needle[0])
@@ -21,7 +26,10 @@ char *_strstr(char *haystack, char *needle)
 					break;
 				}
 			}
-			return (&haystack[i]);
+			if (needle[y] == '\0')
+			{
+				return (&haystack[i]);
+			}
 		}
 	}
 
