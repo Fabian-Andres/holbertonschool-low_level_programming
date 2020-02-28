@@ -2,8 +2,10 @@
 #include <stdio.h>
 
 /**
- * wildcmp - check the code for Holberton School students.
+ * wildcmp - Function wildcmp
  *
+ * @s1: Value
+ * @s2: Value
  * Return: Always 0.
  */
 int wildcmp(char *s1, char *s2)
@@ -16,7 +18,7 @@ int wildcmp(char *s1, char *s2)
 		if (*(s2 + 1) != '\0' && *s1 == '\0')
 			return (0);
 		else
-			return (wildcmp(s1, (s2 +1)) ||  wildcmp((s1 + 1), s2));
+			return (wildcmp(s1, (s2 + 1)) ||  wildcmp((s1 + 1), s2));
 	}
 
 	if (*s2 == *s1)
