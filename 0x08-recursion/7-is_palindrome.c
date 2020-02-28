@@ -1,30 +1,33 @@
-#include <stdio.h>
-#include <string.h>
+#include "holberton.h"
 /**
- * _print_rev_recursion - Function puts
+ * is_palindrome - Function
  *
- * @s: Pointer od array
+ * @s: Pointer of array
  * Return: Always 0.
  */
 
-int _compare(char *s, int x, int y);
-int _strlen_recursion(char *s);
-
 int is_palindrome(char *s)
 {
-	int x = 0, y;
+	int x = 1, y;
 
 	y = _strlen_recursion(s);
 
 	return (_compare(s, x, y));
 }
-
+/**
+ * _compare - Function
+ *
+ * @s: Pointer of array
+ * @x: Position 0
+ * @y: Length
+ * Return: Always 0.
+ */
 int _compare(char *s, int x, int y)
 {
 	if (x >= y)
 	{
 		if (s[x] == s[y])
-			_compare(s, (x + 1), (y - 1));
+			return (_compare(s, x + 1, y - 1));
 		else
 			return (0);
 	}
