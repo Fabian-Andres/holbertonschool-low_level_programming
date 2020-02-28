@@ -1,12 +1,13 @@
 /**
- * factorial - Factorial function.
+ * _pow_recursion - Recursion function.
  *
- * @n: Value
+ * @x: Value
+ * @y: Value
  * Return: Always 0.
  */
 int _pow_recursion(int x, int y)
 {
-	if (x < 0)
+	if (y < 0)
 	{
 		return (-1);
 	}
