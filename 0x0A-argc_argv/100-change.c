@@ -8,21 +8,33 @@
  * @argv: argv Unused
  * Return: Always 0.
  */
-int main(int argc, char *argv[])
+int main(__attribute__((unused)) int argc, char *argv[])
 {
-	int i, sum;
+	int i, val_argv, coins; /** Index, coins */
+	int nums[] = {25, 10, 5, 2, 1};
 
-	for (i = 1; i < argc; i++)
+
+	if (!argv[1])
 	{
-		if (!isdigit(*argv[i]))
-		{
-			printf("Error\n");
-			return (1);
-		}
-		else
-			sum += atoi(argv[i]);
+		printf("Error\n");
+		return (1);
 	}
-	printf("%d\n", sum);
 
+	val_argv = atoi(argv[1]);
+	if (val_argv <= 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+	if (nums[0] == val_argv)
+	{
+		printf("1\n");
+		return (0);
+	}
+
+	
+	
+
+	printf("%d\n", coins);
 	return (0);
 }
