@@ -1,13 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-/**
- * _isdigit - Prototype function
- *
- * @str: str value
- * Return: Always 0.
- */
 int _isdigit(char *str);
-
 /**
  * main - Function
  *
@@ -47,10 +41,10 @@ int _isdigit(char *str)
 	{
 		if (*str < '0' || *str > '9')
 		{
-			return (1);
+			return (0);
 		}
 		str++;
 	}
 
-	return (0);
+	return (1);
 }
