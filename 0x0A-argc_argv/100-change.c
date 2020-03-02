@@ -13,13 +13,14 @@ int main(int argc, char *argv[])
 	int coin[] = {25, 10, 5, 2, 1};
 
 	change = 0;
-	money = atoi(argv[1]);
 
-	if (argc != 2)
+	if (argc == 1)
 	{
 		printf("Error\n");
 		return (1);
 	}
+
+	money = atoi(argv[1]);
 	if (money < 0)
 	{
 		printf("0\n");
