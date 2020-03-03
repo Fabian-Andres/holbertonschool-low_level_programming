@@ -4,14 +4,15 @@
  * main - Function
  *
  * @argc: argc value
- * @c: c Unused
+ * @argv: argv value
  * Return: Always 0.
  */
 int main(int argc, char *argv[])
 {
 	int i, mult;
 
-	for (i = 0; i < argc; i++);
+	for (i = 0; i < argc; i++)
+		;
 
 	if (i == 1 || i != 3)
 	{

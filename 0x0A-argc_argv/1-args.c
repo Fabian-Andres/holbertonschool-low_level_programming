@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
  * main - Function
  *
@@ -12,7 +11,9 @@ int main(int argc, __attribute__((unused)) char **c)
 	int i;
 
 	for (i = 0; i < argc; i++)
-		printf("%i\n", i);
+		;
+
+	printf("%i\n", --i);
 
 	return (0);
 }
