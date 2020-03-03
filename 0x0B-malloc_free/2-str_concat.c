@@ -41,14 +41,14 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	i = 0;
-	while (i < size1 && s1[i])
+	while (s1 && s1[i])
 	{
 		new_arr[i] = s1[i];
 		i++;
 	}
 
 	y = 0;
-	while (y < size2 && s2[i])
+	while (s2 && s2[i])
 	{
 		new_arr[i] = s2[y];
 		i++;
