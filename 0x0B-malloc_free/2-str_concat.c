@@ -12,7 +12,7 @@ int sizestr(char *str)
 {
 	int i;
 
-	for (i = 0; str[i] != 0; i++)
+	for (i = 0; str && str[i]; i++)
 		;
 
 	return (i);
@@ -31,10 +31,6 @@ char *str_concat(char *s1, char *s2)
 	int i, y, size1, size2;
 	char *new_arr;
 
-	if (s1 == NULL || s2 == NULL)
-	{
-		return ("");
-	}
 	size1 = sizestr(s1);
 	size2 = sizestr(s2) + 1;
 	new_arr = malloc(sizeof(char) * (size1 + size2));
@@ -45,14 +41,14 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	i = 0;
-	while (i < size1)
+	while (i < size1 && s1[i])
 	{
 		new_arr[i] = s1[i];
 		i++;
 	}
 
 	y = 0;
-	while (y < size2)
+	while (y < size2 && s2[i])
 	{
 		new_arr[i] = s2[y];
 		i++;
