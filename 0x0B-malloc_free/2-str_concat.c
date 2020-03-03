@@ -31,10 +31,6 @@ char *str_concat(char *s1, char *s2)
 	int i, y, size1, size2;
 	char *new_arr;
 
-	if (s1 == NULL || s2 == NULL)
-	{
-		return (NULL);
-	}
 	size1 = sizestr(s1);
 	size2 = sizestr(s2) + 1;
 	new_arr = malloc(sizeof(char) * (size1 + size2));
