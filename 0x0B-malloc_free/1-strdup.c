@@ -1,10 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * create_array - print array of characters
+ * sizestr - return size number
  *
- * @size: the size of the memory to print
- * @c: charactter to print
+ * @str: charactter to print
  *
  * Return: 0
  */
@@ -13,13 +12,22 @@ int sizestr(char *str)
 {
 	int i;
 
-	for (i = 0; str[i] != 0; i++);
+	for (i = 0; str[i] != 0; i++)
+		;
 
 	return (i);
 }
+
+/**
+ * _strdup - print array of characters
+ *
+ * @str: charactter to print
+ *
+ * Return: 0
+ */
 char *_strdup(char *str)
 {
-	unsigned int i, size;
+	int i, size;
 	char *new_arr;
 
 	if (str == NULL)
@@ -28,6 +36,11 @@ char *_strdup(char *str)
 	}
 	size = sizestr(str);
 	new_arr = malloc(sizeof(char) * size);
+
+	if (new_arr == NULL)
+	{
+		return (NULL);
+	}
 	i = 0;
 	while (i < size)
 	{
