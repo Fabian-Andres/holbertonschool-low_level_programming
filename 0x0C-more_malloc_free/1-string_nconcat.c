@@ -32,10 +32,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int size1, size2;
 
 	size1 = longarr(s1);
-	size2 = n;
+	size2 = longarr(s2);
 
-	if (n >= size2)
-		size2 = longarr(s2);
+	if (n <= size2)
+		size2 = n;
 
 	new_arr = malloc(sizeof(char) * (size1 + size2) + 1);
 	if (new_arr == NULL)
