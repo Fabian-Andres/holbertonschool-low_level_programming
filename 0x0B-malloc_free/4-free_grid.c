@@ -3,7 +3,7 @@
 /**
  * free_grid - Free memory of array
  *
- * @width: width of array
+ * @grid: Array multidimensional
  * @height: height of the grid
  *
  * Return: Nothing.
