@@ -43,11 +43,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 
-	for (i = 0; s1[i] != '\0'; i++)
+	for (i = 0; s1 && s1[i] != '\0'; i++)
 	{
 		new_arr[i] = s1[i];
 	}
-	for (y = 0; y < n; y++)
+	for (y = 0; y < size2; y++)
 	{
 		new_arr[i] = s2[y];
 		i++;
