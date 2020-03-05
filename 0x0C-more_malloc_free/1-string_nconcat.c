@@ -31,9 +31,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, y;
 	unsigned int size1, size2;
 
-	if (s1 == NULL || s2 == NULL)
-		return ("");
-
 	size1 = longarr(s1);
 	size2 = n;
 
