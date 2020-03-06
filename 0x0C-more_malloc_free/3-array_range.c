@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _calloc - Funtion _calloc
+ * array_range - Funtion _calloc
  *
- * @nmemb: value
- * @size: value
+ * @min: value
+ * @max: value
  * Return: Always 0.
  */
 int *array_range(int min, int max)
@@ -21,10 +21,11 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 
-	i = min;
-	while (i <= max)
+	i = 0;
+	while (min <= max)
 	{
-		new_arr[i - min] = i;
+		new_arr[i] = min;
+		min++;
 		i++;
 	}
 
