@@ -7,24 +7,11 @@
  * @age: age
  * @owner: owner
  */
-struct dog
-{
-	char *name;
-	float age;
-	char *owner;
-};
+#include "dog.h"
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	struct point my_dog
-
-	my_dog = malloc(sizeof(struct dog));
-	if (my_dog == NULL)
-		return (NULL);
-	my_dog->name = name;
-	my_dog->age = age;
-	my_dog->owner = owner;
-
-	*d = &my_dog;
-	return (d);
+	d->name = name;
+	d->age = age;
+	d->owner = owner;
 }
