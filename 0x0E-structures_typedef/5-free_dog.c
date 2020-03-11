@@ -3,7 +3,8 @@
 /**
  * free_dog - free_dog
  *
-	 * Return: Always 0.
+ * @d: structure
+ * Return: Always 0.
  */
 void free_dog(dog_t *d)
 {
