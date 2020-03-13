@@ -1,20 +1,30 @@
 #include <stdlib.h>
 /**
- * array_iterator - print iterator
+ * int_index - print comparation
  *
  * @array: array
  * @size: size of the array
- * @action: pointer to function
+ * @cmp: pointer to function
  *
  * Return: Nothing.
  */
-int int_index(int *array, int size, int (*cmp)(int));
+int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
 
-	if (cpm == NULL || array == NULL)
-		return (-1);
+	if (array && cmp)
+	{
+		if (size <= 0)
+			return (-1);
 
-	for (i = 0; i < size; i++)
-		cpm(array[i]);
+		i = 0;
+		while (i < size)
+		{
+			if (cmp(array[i]))
+				return (i);
+
+			i++;
+		}
+	}
+	return (-1);
 }
