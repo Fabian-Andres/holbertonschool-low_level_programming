@@ -1,18 +1,16 @@
-#include <stdlib.h>
 #include <stdarg.h>
-#include "variadic_functions.h"
 
 /**
- * sum_them_all - Sum function.
+ * sum_them_all - sum function.
  *
- * @n: Const n
+ * @n: const n
  * Return: sum.
  */
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list list;
-	unsigned int i;
 	int sum = 0;
+	unsigned int i;
 
 	if (n == 0)
 	{
@@ -25,6 +23,5 @@ int sum_them_all(const unsigned int n, ...)
 		sum += va_arg(list, int);
 	}
 	va_end(list);
-
 	return (sum);
 }
