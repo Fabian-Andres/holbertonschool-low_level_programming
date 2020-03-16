@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
 #include "variadic_functions.h"
 /**
  * chara - function character
@@ -55,12 +55,12 @@ void print_all(const char * const format, ...)
 {
 	int i, j;
 	va_list strg;
-	typ typin[] = {
+	typ funct[] = {
 		{"c", chara},
 		{"i", integ},
 		{"f", floa},
 		{"s", str},
-		{0, 0}
+		{NULL, NULL}
 	};
 
 	char *s1 = "", *s2 = ", ";
@@ -70,12 +70,12 @@ void print_all(const char * const format, ...)
 	while (format != 0 && format[i] != 0)
 	{
 		j = 0;
-		while (typin[j].op != 0)
+		while (funct[j].op != 0)
 		{
-			if (typin[j].op[0] == format[i])
+			if (funct[j].op[0] == format[i])
 			{
 				printf("%s", s1);
-				typin[j].f(strg);
+				funct[j].f(strg);
 				s1 = s2;
 			}
 			j++;
