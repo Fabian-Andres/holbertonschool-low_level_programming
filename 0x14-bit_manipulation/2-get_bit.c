@@ -3,6 +3,7 @@
 /**
  * get_bit - function get index bit.
  *
+ * @n: number
  * @index: position index to get.
  * Return: Always 0.
  */
