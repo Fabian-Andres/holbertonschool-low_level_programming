@@ -9,22 +9,35 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	 int fd;
-	 char buf[468];
+	size_t i = 0;
+	int fd, fc;
+	char buf;
 
-	 fd = open(filename, O_RDONLY);
+	if (filename == NULL)
+		return (0);
 
+	fd = open(filename, O_RDONLY);
 	if (fd == -1)
-	{
-		printf("Failed to open and read the file.\n");
-		exit(1);
-	}
+		return (0);
 
-	read(fd, buf, letters);
-	buf[letters] = '\0';
+	fc = read(fd, &buf, 1);
+	if (fc == -1)
+		return (0);
+
+	while (fc != 0 && i != letters)
+	{
+		fc = write(STDOUT_FILENO, &buf, 1);
+		if (fc == -1)
+			return (0);
+		fc = read(fd, &buf, 1);
+		if (fc == -1)
+			return (0);
+		i++;
+	}
+	if (fc == 0)
+		i++;
 
 	close(fd);
 
-	printf("%s\n", buf);
-	return (letters);
+	return (i);
 }
