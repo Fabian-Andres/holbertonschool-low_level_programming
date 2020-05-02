@@ -3,8 +3,8 @@
 /**
  * print_dlistint - fucntion to print dlist
  *
- * @h: head duble linked list
- * Return: Always EXIT_SUCCESS.
+ * @h: head doubly linked list
+ * Return: number o.
  */
 size_t print_dlistint(const dlistint_t *h)
 {
@@ -12,7 +12,7 @@ size_t print_dlistint(const dlistint_t *h)
 
 	while (h != NULL)
 	{
-		printf("%u \n", h->n);
+		printf("%u\n", h->n);
 		h = h->next;
 		i++;
 	}
