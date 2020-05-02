@@ -3,7 +3,7 @@
 /**
  * print_dlistint - fucntion to print dlist
  *
- * @dlistint_t: const dlist
+ * @h: head duble linked list
  * Return: Always EXIT_SUCCESS.
  */
 size_t print_dlistint(const dlistint_t *h)
