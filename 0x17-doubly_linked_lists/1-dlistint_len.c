@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * dlistint_len - fucntion to print len
+ * dlistint_len - function to print len
  *
  * @h: head doubly linked list
- * Return: number o.
+ * Return: number.
  */
 size_t dlistint_len(const dlistint_t *h)
 {
