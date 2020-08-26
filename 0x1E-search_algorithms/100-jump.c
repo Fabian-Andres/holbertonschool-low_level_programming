@@ -1,25 +1,6 @@
 #include "search_algos.h"
 
 /**
- * minbn - function to find the min number
- *
- * @b: first number
- * @n: second number
- * Return: min number
- */
-size_t minbn(size_t b, size_t n)
-{
-	size_t min;
-
-	if (b < n)
-		min = b;
-	else
-		min = n;
-
-	return (min);
-}
-
-/**
  * jump_search - function jump search
  *
  * @array: is a pointer to the first element of the array to search
